@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Flag Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #3c3b6e 50%, #ffffff 50%);
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #3c3b6e;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        #chat-container {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f4f4f4;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #chat-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+        #chat-box p {
+            margin: 10px 0;
+        }
+        #chat-box .user-message {
+            text-align: right;
+            color: #007BFF;
+        }
+        #chat-box .bot-message {
+            text-align: left;
+            color: #28a745;
+        }
+        form {
+            display: flex;
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #3c3b6e;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #1d1a4f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>American Flag Chatbot</h1>
+        <p>Talk to our AI-powered assistant!</p>
+    </header>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <form id="chat-form">
+            <input type="text" id="user-input" placeholder="Type your message here..." required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script>
+        const chatForm = document.getElementById('chat-form');
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const userMessage = userInput.value;
+
+            // Display user's message
+            const userMessageElem = document.createElement('p');
+            userMessageElem.textContent = userMessage;
+            userMessageElem.classList.add('user-message');
+            chatBox.appendChild(userMessageElem);
+
+            // Clear input
+            userInput.value = '';
+
+            // Fetch response from the chatbot
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: userMessage }),
+                });
+                const data = await response.json();
+                const botReply = data.reply || "Something went wrong.";
+
+                // Display bot's response
+                const botMessageElem = document.createElement('p');
+                botMessageElem.textContent = botReply;
+                botMessageElem.classList.add('bot-message');
+                chatBox.appendChild(botMessageElem);
+
+                // Scroll to bottom
+                chatBox.scrollTop = chatBox.scrollHeight;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
