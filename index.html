@@ -112,12 +112,13 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Origin': 'https://vrwdyg2crg.execute-api.eu-north-1.amazonaws.com',
                     },
                     body: JSON.stringify({ message: userMessage }),
                 });
                 const data = await response.json();
                 const botReply = data.reply || "Something went wrong.";
+                console.log(botReply);
 
                 // Display bot's response
                 const botMessageElem = document.createElement('p');
