@@ -107,6 +107,7 @@
 
             // Fetch response from the chatbot
             try {
+                console.log(`MESSAGE: ${userMessage}`);
                 const response = await fetch('https://vrwdyg2crg.execute-api.eu-north-1.amazonaws.com/chatbot', {
                     method: 'POST',
                     headers: {
