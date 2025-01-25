@@ -119,12 +119,21 @@
         <h1>AI: American Intelligence</h1>
 <!--         <p></p> -->
     </header>
-    <div id="chat-container">
-        <div id="chat-box"></div>
-        <form id="chat-form">
-            <input type="text" id="user-input" placeholder="Type your message here..." required />
-            <button type="submit">Send</button>
-        </form>
+      <nav>
+        <a href="#" id="menu-chat" class="active">Chat</a>
+        <a href="#" id="menu-trade">Trade</a>
+      </nav>
+    <div id="page-chat">
+        <div id="chat-container">
+            <div id="chat-box"></div>
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Type your message here..." required />
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div id="page-trade">
+        <h2>Coming Soon</h2>        
     </div>
     <script>
         const chatForm = document.getElementById('chat-form');
@@ -171,5 +180,39 @@
             }
         });
     </script>
+    <script>
+        // JavaScript for menu navigation
+        const menuChat = document.getElementById("menu-chat");
+        const menuTrade = document.getElementById("menu-trade");
+    
+        const pageChat = document.getElementById("page-chat");
+        const pageTrade = document.getElementById("page-trade");
+    
+        // Function to switch pages
+        function showPage(pageToShow, menuToActivate) {
+          // Hide all pages
+          pageChat.classList.remove("active");
+          pageTrade.classList.remove("active");
+    
+          // Remove active class from all menu items
+          menuChat.classList.remove("active");
+          menuTrade.classList.remove("active");
+    
+          // Show the selected page and highlight the menu
+          pageToShow.classList.add("active");
+          menuToActivate.classList.add("active");
+        }
+    
+        // Event listeners for menu items
+        menuChat.addEventListener("click", (e) => {
+          e.preventDefault();
+          showPage(pageChat, menuChat);
+        });
+    
+        menuTrade.addEventListener("click", (e) => {
+          e.preventDefault();
+          showPage(pageTrade, menuTrade);
+        });
+  </script>
 </body>
 </html>
