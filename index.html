@@ -235,11 +235,13 @@
         // Event listeners for menu items
         menuChat.addEventListener("click", (e) => {
           e.preventDefault();
+          console.log('chat click');
           showPage(pageChat, menuChat);
         });
     
         menuTrade.addEventListener("click", (e) => {
           e.preventDefault();
+          console.log('trade click');
           showPage(pageTrade, menuTrade);
         });
   </script>
