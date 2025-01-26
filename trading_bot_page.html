@@ -6,93 +6,88 @@
     <link rel="icon" type="image/png" href="/united-states.png"/>
     <title>AI: American Intelligence</title>
     <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #3c3b6e 33%, #ffffff 33%, #ffffff 66%, #b22234 66%);
-      background-size: 100% 300%;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-      background: #3c3b6e;
-      color: white;
-      border-bottom: 5px solid #b22234;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    header p {
-      margin: 0;
-      font-size: 1.2em;
-    }
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #d3d3d3;
-      padding: 10px;
-    }
+        /* Body and HTML for full-height background */
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #3c3b6e 33%, #ffffff 33%, #ffffff 66%, #b22234 66%);
+            background-size: 100% 300%;
+            color: #333;
+        }
 
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      cursor: pointer;
-    }
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #3c3b6e;
+            color: white;
+            border-bottom: 5px solid #b22234;
+        }
 
-    nav a.active {
-      color: #3c3b6e;
-      text-decoration: underline;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-    .page {
-      display: none; /* Hide pages by default */
-      padding: 20px;
-    }
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #d3d3d3;
+            padding: 10px;
+        }
 
-    .page.active {
-      display: block; /* Show the active page */
-    }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-    .banner {
-      width: 100%;
-      height: auto; /* Adjust height as needed */
-      margin-top: 20px; /* Replace with your image URL */
-      margin: 20px auto; /* Centres the image and adds vertical spacing */
-    }
+        nav a.active {
+            color: #3c3b6e;
+            text-decoration: underline;
+        }
 
-    h3 {
-      text-align: center;
-      color: white;
-    }
+        /* Banner styling */
+        .banner img {
+            width: 100%; /* Make the image fill the browser width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any extra space below the image */
+        }
 
-
-  </style>
+        /* Content styling */
+        h3 {
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>AI: American Intelligence</h1>
-<!--         <p></p> -->
     </header>
-      <nav>
+    <nav>
         <a href="/" id="menu-chat">Chat</a>
         <a href="/trading_bot_page.html" id="menu-trade" class="active">Trading Bot</a>
         <a href="https://dexscreener.com/" id="menu-dex">Dexscreener</a>
-      </nav>
+    </nav>
     <div>
-      <h3>
-        Coming Soon...
-      </h3>
+        <h3>Coming Soon...</h3>
     </div>
     <div class="banner">
-        <img src="banner.jpg">
+        <img src="banner.jpg" alt="Banner">
     </div>
 </body>
 </html>
