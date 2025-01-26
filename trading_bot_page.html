@@ -13,9 +13,12 @@
             padding: 0;
         }
 
-        /* Body and HTML for full-height background */
+        /* Body and HTML for full-height layout */
         html, body {
             height: 100%;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: space-between; /* Push banner to the bottom */
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #3c3b6e 33%, #ffffff 33%, #ffffff 66%, #b22234 66%);
             background-size: 100% 300%;
@@ -38,7 +41,7 @@
             letter-spacing: 2px;
         }
 
-        /* Navigation */
+        /* Navigation styling */
         nav {
             display: flex;
             justify-content: center;
@@ -59,18 +62,22 @@
             text-decoration: underline;
         }
 
-        /* Banner styling */
-        .banner img {
-            width: 100%; /* Make the image fill the browser width */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Remove any extra space below the image */
-        }
-
         /* Content styling */
         h3 {
             text-align: center;
             color: white;
             padding: 20px 0;
+        }
+
+        /* Banner styling */
+        .banner {
+            width: 100%; /* Ensure full width */
+        }
+
+        .banner img {
+            width: 100%; /* Make the image fill the browser width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any extra space below the image */
         }
     </style>
 </head>
