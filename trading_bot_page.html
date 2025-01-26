@@ -16,9 +16,6 @@
         /* Body and HTML for full-height layout */
         html, body {
             height: 100%;
-            display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: space-between; /* Push banner to the bottom */
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #3c3b6e 33%, #ffffff 33%, #ffffff 66%, #b22234 66%);
             background-size: 100% 300%;
@@ -31,7 +28,7 @@
             padding: 20px;
             background: #3c3b6e;
             color: white;
-            border-bottom: 5px solid #b22234; /* Red border */
+            border-bottom: 5px solid #b22234; /* Red line at bottom */
         }
 
         header h1 {
@@ -41,13 +38,13 @@
             letter-spacing: 2px;
         }
 
-        /* Navigation styling */
+        /* Navigation bar styling */
         nav {
             display: flex;
             justify-content: center;
             background: #d3d3d3;
             padding: 10px;
-            margin-top: 0; /* Remove spacing above */
+            margin: 0; /* Ensure no gap between header and nav */
         }
 
         nav a {
