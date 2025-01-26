@@ -16,6 +16,9 @@
         /* Body and HTML for full-height layout */
         html, body {
             height: 100%;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: space-between; /* Push the banner to the bottom */
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #3c3b6e 33%, #ffffff 33%, #ffffff 66%, #b22234 66%);
             background-size: 100% 300%;
@@ -44,7 +47,6 @@
             justify-content: center;
             background: #d3d3d3;
             padding: 10px;
-            margin: 0; /* Ensure no gap between header and nav */
         }
 
         nav a {
@@ -61,10 +63,16 @@
         }
 
         /* Content styling */
-        h3 {
+        .content {
+            flex: 1; /* Take up the remaining space between header and banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content h3 {
             text-align: center;
             color: white;
-            padding: 20px 0;
         }
 
         /* Banner styling */
@@ -88,7 +96,7 @@
         <a href="/trading_bot_page.html" id="menu-trade" class="active">Trading Bot</a>
         <a href="https://dexscreener.com/" id="menu-dex">Dexscreener</a>
     </nav>
-    <div>
+    <div class="content">
         <h3>Coming Soon...</h3>
     </div>
     <div class="banner">
