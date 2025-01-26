@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <script src="index.js"></script>
-  </body>
+    <link rel="icon" type="image/png" href="/united-states.png"/>
+    <title>AI: American Intelligence</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #3c3b6e 33%, #ffffff 33%, #ffffff 66%, #b22234 66%);
+      background-size: 100% 300%;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #3c3b6e;
+      color: white;
+      border-bottom: 5px solid #b22234;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #d3d3d3;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a.active {
+      color: #3c3b6e;
+      text-decoration: underline;
+    }
+
+    .page {
+      display: none; /* Hide pages by default */
+      padding: 20px;
+    }
+
+    .page.active {
+      display: block; /* Show the active page */
+    }
+
+    .banner {
+      width: 100%;
+      height: auto; /* Adjust height as needed */
+      margin-top: 20px; /* Replace with your image URL */
+      margin: 20px auto; /* Centres the image and adds vertical spacing */
+    }
+
+
+  </style>
+</head>
+<body>
+    <header>
+        <h1>AI: American Intelligence</h1>
+<!--         <p></p> -->
+    </header>
+      <nav>
+        <a href="/index.html" id="menu-chat" class="active">Chat</a>
+        <a href="" id="menu-trade">Trading Bot (Coming Soon)</a>
+        <a href="https://dexscreener.com/" id="menu-dex">Dexscreener</a>
+      </nav>
+    <div>
+      <h3>
+        Coming Soon...
+      </h3>
+    </div>
+    <div class="banner">
+        <img src="banner.jpg">
+    </div>
+</body>
 </html>
