@@ -129,12 +129,13 @@
     }
 
     .banner {
-      width: 100%;
-      height: auto; /* Adjust height as needed */
-      margin-top: 20px; /* Replace with your image URL */
-/*       display: block; /* Makes margin: auto work for centring */ */
-      margin: 20px auto; /* Centres the image and adds vertical spacing */
-/*       max-width: 600px;  */
+        width: 100%; /* Ensure full width */
+    }
+
+    .banner img {
+        width: 100%; /* Make the image fill the browser width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove any extra space below the image */
     }
 
   </style>
