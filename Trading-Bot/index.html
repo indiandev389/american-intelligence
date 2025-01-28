@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/united-states.png"/>
+    <title>AI: American Intelligence</title>
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Body and HTML for full-height layout */
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: space-between; /* Push the banner to the bottom */
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #3c3b6e 33%, #ffffff 33%, #ffffff 66%, #b22234 66%);
+            background-size: 100% 300%;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #3c3b6e;
+            color: white;
+            border-bottom: 5px solid #b22234; /* Red line at bottom */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation bar styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #d3d3d3;
+            padding: 10px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a.active {
+            color: #3c3b6e;
+            text-decoration: underline;
+        }
+
+        /* Content styling */
+        .content {
+            flex: 1; /* Take up the remaining space between header and banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content h2 {
+            text-align: center;
+            color: white;
+        }
+
+        /* Banner styling */
+        .banner {
+            width: 100%; /* Ensure full width */
+        }
+
+        .banner img {
+            width: 100%; /* Make the image fill the browser width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any extra space below the image */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI: American Intelligence</h1>
+    </header>
+    <nav>
+        <a href="/" id="menu-chat">Chat</a>
+        <a href="/trading_bot_page.html" id="menu-trade" class="active">Trading Bot</a>
+        <a href="https://dexscreener.com/" id="menu-dex" target="_blank">Dexscreener</a>
+        <a href="https://x.com/NancyAwoken" id="menu-dex" target="_blank">X</a>
+        <a href="https://truthsocial.com/@NancyAwoken" id="menu-dex" target="_blank">Truth Social</a>
+    </nav>
+    <div class="content">
+        <h2>Coming Soon...</h2>
+    </div>
+    <div class="banner">
+        <img src="../banner.jpg" alt="Banner">
+    </div>
+</body>
+</html>
